@@ -301,20 +301,34 @@ a {
   line-height: 1.55;
 }
 
-.examples-label {
-  margin-top: 1.15rem;
-  margin-bottom: 0.4rem;
-  color: var(--accent);
-  font-size: 0.9375rem;
-  font-weight: 700;
+.project-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.75rem;
 }
 
-.service-card ul {
-  padding-left: 1.15rem;
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.4rem 1.3rem 1.5rem;
 }
 
-.service-card li + li {
-  margin-top: 0.4rem;
+.project-card h3 {
+  margin-bottom: 0.7rem;
+}
+
+.project-card p {
+  line-height: 1.6;
+}
+
+.project-card-featured {
+  border-top: 4px solid var(--accent);
+  padding: 1.7rem 1.45rem 1.8rem;
+}
+
+.project-card-featured h3 {
+  font-size: 1.45rem;
 }
 
 .steps {
@@ -337,28 +351,68 @@ a {
   margin-bottom: 0.4rem;
 }
 
-.project {
-  max-width: 46rem;
-  margin-top: 1.75rem;
-  padding: 1.5rem 1.35rem;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 12px;
+.inquiry-form {
+  display: grid;
+  gap: 0.95rem;
+  margin-top: 1.35rem;
 }
 
-.project-meta {
-  margin-bottom: 0.45rem;
-  color: var(--accent);
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field label {
+  color: var(--navy);
   font-size: 0.9375rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-.project h3 {
-  margin-bottom: 0.85rem;
+.optional {
+  color: var(--ink-soft);
+  font-weight: 400;
 }
 
-.project p + p {
-  margin-top: 0.85rem;
+.field input,
+.field textarea {
+  width: 100%;
+  margin: 0;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #cfc8bc;
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  line-height: 1.45;
+}
+
+.field textarea {
+  min-height: 8.5rem;
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
+button.button {
+  margin: 0.25rem 0 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.form-note a {
+  font-weight: 600;
 }
 
 .contact-panel {
@@ -369,15 +423,10 @@ a {
   border-radius: 16px;
 }
 
-.contact-actions {
-  margin-top: 0.5rem;
+.contact-panel > p {
+  margin-top: 1rem;
 }
 
-.contact-address {
-  font-size: 0.975rem;
-}
-
-.contact-address a,
 .site-footer a {
   font-weight: 600;
 }
@@ -394,11 +443,40 @@ a {
   font-weight: 700;
 }
 
+@media (max-width: 719px) {
+  .header-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .logo,
+  .header-cta,
+  .site-nav {
+    grid-column: 1;
+  }
+
+  .logo {
+    grid-row: 1;
+  }
+
+  .header-cta {
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .site-nav {
+    grid-row: 3;
+  }
+}
+
 @media (min-width: 640px) {
   .cta-row {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+  }
+
+  button.button {
+    width: auto;
   }
 }
 
@@ -417,9 +495,13 @@ a {
   }
 
   .service-card,
-  .project,
+  .project-card,
   .contact-panel {
     padding: 1.75rem 1.6rem 1.85rem;
+  }
+
+  .project-card-featured {
+    padding: 2rem 1.85rem 2.1rem;
   }
 
   .contact-panel {
@@ -427,7 +509,17 @@ a {
   }
 }
 
-@media (min-width: 880px) {
+@media (min-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-card-featured {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1100px) {
   html {
     scroll-padding-top: var(--header-height);
   }
