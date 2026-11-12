@@ -22,9 +22,9 @@ Open `index.html` in a browser. Paths are relative, so the page also works from 
 
 Edit the copy in `index.html`. Edit colors, spacing, and layout in `styles.css`.
 
-Every contact link uses `mailto:hello@automatewithkeith.com` with the subject `Automation Project Inquiry`. To switch to a hosted form or scheduling page later, replace those `mailto:` links. A comment above the contact section marks the spot.
+Every contact link uses `mailto:automatewithkeith@gmail.com` with the subject `Automation Project Inquiry`. To switch to a hosted form or scheduling page later, replace those `mailto:` links. A comment above the contact section marks the spot.
 
-Confirm that `hello@automatewithkeith.com` receives mail before you rely on it. This repository does not create or test the mailbox.
+Confirm that `automatewithkeith@gmail.com` receives mail before you rely on it. This repository does not create or test the mailbox.
 
 ## Deploy with GitHub Pages
 
