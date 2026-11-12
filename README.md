@@ -22,7 +22,7 @@ Open `index.html` in a browser. Paths are relative, so the page also works from 
 
 Edit the copy in `index.html`. Edit colors, spacing, and layout in `styles.css`.
 
-The inquiry form opens an email draft to `automatewithkeith@gmail.com` with the subject `Automation Project Inquiry`. GitHub Pages cannot store form submissions. To receive inquiries without opening the visitor's email app, connect a form service and point the form at that service. A comment above the contact section marks the spot.
+The Email Keith buttons open a message to `automatewithkeith@gmail.com` with the subject `Project Inquiry`.
 
 Confirm that `automatewithkeith@gmail.com` receives mail before you rely on it. This repository does not create or test the mailbox.
 
